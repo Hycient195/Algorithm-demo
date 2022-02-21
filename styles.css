@@ -221,4 +221,11 @@ footer > p > a{
     border-top: none;
   }
 
+  header{
+    padding: 1em 1.5em;
+  }
+
+  main{
+    margin-top: 6em;
+  }
 }
