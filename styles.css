@@ -1,0 +1,224 @@
+/* Global Rules */
+*{
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  /* border: none; */
+  /* border-radius: 10px; */
+}
+
+.bold{
+  font-weight: bold;
+}
+
+:root{
+  --light-background: grey;
+}
+
+header{
+  position: fixed;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  /* justify-items: center: */
+  top: 0;
+  width: 100%;
+  padding: 1.5em 3em;
+  background-color: white;
+  z-index: 1;
+  /* border-bottom: 1px solid gray; */
+  /* text-align: center; */
+}
+
+header > div > h3{
+  margin: 0px;
+}
+
+header > div > h3 > a{
+  color: black;
+  font-family: monospace;
+}
+
+header > h1{
+  margin: 0px;
+  font-size: 3.5vh;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main{
+  width: 100%;
+  margin-top: 5.3em;
+  /* background-color: orange; */
+  /* color: orange */
+}
+
+
+section{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5em;
+  background-color: whitesmoke;
+}
+
+section *{
+  border: 1px solid gray;
+}
+
+section > .block{
+  height: 350px;
+  padding: 1.9em 1.8em;
+  display: grid;
+  grid-template-rows: 1fr 3fr 8fr;
+  justify-items: center;
+  /* row-gap: 2em; */
+}
+
+.block > .content{
+  /* margin: 0 auto; */
+  width: 80%;
+  /* background-color: blue; */
+}
+
+.block-title{
+  padding: 4px;
+  margin: -10px;
+  margin-bottom: 0.2em;
+  height: fit-content;
+  background-color: white;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+input{
+  /* margin: 0 auto; */
+  width: 100%;
+  height: 3em;
+  text-align: center;
+  padding: 0px 5px;
+  font-size: 0.9rem;
+}
+
+.output{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.1em;
+  text-overflow: clip;
+  overflow-y: scroll;
+  overflow-wrap:break-word;
+  max-height: 11rem;
+  background-color: white;
+}
+
+#base_inputs{
+  /* background-color: blue; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  height: max-content;
+  text-align: center;
+}
+
+#range_inputs{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: max-content;
+  text-align: center;
+}
+
+#range_inputs{
+  border: none;
+}
+
+select{
+  height: 3em;
+  font-size: 0.9rem;
+  /* border: none; */
+}
+
+h2{
+  border: none;
+}
+
+footer{
+  text-align: center;
+  padding: 0px 3vw;
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-weight: bold; */
+}
+
+footer > p > a{
+  color: black;
+}
+
+@media only screen and (max-width: 1200px){
+  section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+}
+
+@media only screen and (max-width: 1000px){
+  section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  header{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    /* justify-items: center: */
+    top: 0;
+    width: 100%;
+    padding: 1.5em 1.5em;
+    background-color: white;
+    z-index: 1;
+    /* text-align: center; */
+  }
+
+  header > div > h3{
+    font-size: 1.2em;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+
+  section, section > div{
+    border-right: none;
+    border-left: none;
+    border-top: none;
+  }
+
+}

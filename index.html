@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Algorithm Utilities</h1>
+    <div>
+      <h3><a target="_blank" href="https://dsa-doc-hycient.vercel.app/">Documentation</a></h3>
+      <h3><a target="_blank" href="http://hycient-portfolio.herokuapp.com/">Profile</a></h3>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="block" >
+        <p class="block-title">ROT13 Encryptor</p>
+        <!-- <h3 class="title">hello</h3> -->
+        <!-- <div class="content"> -->
+          <input type="text" id="caeser-cipher-input" value="" placeholder="Enter text to be encrypted">
+          <div class="output" id="caeser-cipher-output">
+
+          </div>
+        <!-- </div> -->
+        <script src="./caesar_cipher.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">ROT13 Decryptor</p>
+          <input type="text" id="reverse-caeser-cipher-input" placeholder="Enter text to be decrypted">
+          <div class="output" id="reverse-caeser-cipher-output">
+            
+          </div>
+        <script src="./reverse_caeser_cipher.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Number To Words Converter</p>
+          <input type="number" id="num_to_words_input" placeholder="Enter number to be converted">
+          <div class="output" id="num_to_words_output">
+            
+          </div>
+        <script src="./num_to_words.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Number Base Converter</p>
+        <div id="base_inputs">
+          <input type="text" id="num_base_input" placeholder="Enter number">
+          <select name="" id="base_from" value="">
+            <option name="" id="">from</option>
+            <option value="2">Base 2</option>
+            <option value="3">Base 3</option>
+            <option value="4">Base 4</option>
+            <option value="5">Base 5</option>
+            <option value="6">Base 6</option>
+            <option value="7">Base 7</option>
+            <option value="8">Base 8</option>
+            <option value="9">Base 9</option>
+            <option value="10">Base 10</option>
+            <option value="11">Base 11</option>
+            <option value="12">Base 12</option>
+            <option value="13">Base 13</option>
+            <option value="14">Base 14</option>
+            <option value="15">Base 15</option>
+            <option value="16">Base 16</option>
+          </select>
+          <select name="" id="base_to" value=""> 
+            <option name="" id="">to</option>
+            <option value="2">Base 2</option>
+            <option value="3">Base 3</option>
+            <option value="4">Base 4</option>
+            <option value="5">Base 5</option>
+            <option value="6">Base 6</option>
+            <option value="7">Base 7</option>
+            <option value="8">Base 8</option>
+            <option value="9">Base 9</option>
+            <option value="10">Base 10</option>
+            <option value="11">Base 11</option>
+            <option value="12">Base 12</option>
+            <option value="13">Base 13</option>
+            <option value="14">Base 14</option>
+            <option value="15">Base 15</option>
+            <option value="16">Base 16</option>
+          </select>
+        </div>
+
+          <div class="output" id="base_output">
+            
+          </div>
+        <script src="./base_converter.js"></script>
+      </div>
+
+      
+      <div class="block">
+        <p class="block-title">Missing Letter Finder</p>
+          <input type="text" id="missing_letter_input" placeholder="Enter the sequence of letters">
+          <div class="output" id="missingg_letter_output">
+            
+          </div>
+        <script src="./missing_letter.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Arabic To Roman Numeral Converter</p>
+          <input type="number" id="numeral_conv_input" placeholder="Enter number to be converted">
+          <div class="output" id="numeral_conv_output">
+            
+          </div>
+        <script src="./roman_numeral_converter.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Word To Binary Converter</p>
+          <input type="text" id="word_input" placeholder="Enter word to be converted">
+          <div class="output" id="binary_output">
+            
+          </div>
+        <script src="./string_to_binary.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Binary To Word Converter</p>
+          <input type="text" id="binary_input" placeholder="Enter binary sequence to be converted">
+          <div class="output" id="word_output">
+            
+          </div>
+        <script src="./binary_to_string.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Sum In Range</p>
+        <div id="range_inputs">
+          <input type="number" id="min_range_input" placeholder="Enter lower range">
+          <input type="number" id="max_range_input" placeholder="Enter upper range">
+        </div>    
+        <div class="output" id="sum_output">
+            
+          </div>
+        <script src="./sum_in_range.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Palindrome Checker</p>
+          <input type="text" id="palindrome_input" placeholder="Enter word to be checked">
+          <div class="output" id="palindrome_output">
+            
+          </div>
+        <script src="./palindrome_checker.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">English To Pig Latin Converter</p>
+          <input type="text" id="pig_latin_input" placeholder="Enter text to be converted">
+          <div class="output" id="pig_latin_output">
+            
+          </div>
+        <script src="./pig_latin.js"></script>
+      </div>
+
+      <div class="block">
+        <p class="block-title">Sorted Union</p>
+        <div id="range_inputs">
+          <input type="text" id="union_entry_one" placeholder="Enter text to be converted">
+          <input type="text" id="union_entry_two" placeholder="Enter text to be converted">
+        </div>         
+        <div class="output" id="union_output">
+          
+        </div>
+        <script src="./sorted_union.js"></script>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <p><a href="hycient-portfolio.herokuapp.com">Hycient Onyeukwu</a> | 2022</p>
+    <p>User interface and all functionalities built using plain HTML CSS and Vanilla JavaScript, with no frameworks</p>
+  </footer>
+</body>
+</html>
