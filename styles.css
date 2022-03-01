@@ -1,19 +1,15 @@
-/* Global Rules */
+/*=============== Global Rules ===============*/
 *{
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* border: 1px solid black; */
-  /* border: none; */
-  /* border-radius: 10px; */
 }
+
 *::-webkit-scrollbar{
   display: none;
 }
 
-.body{
-  /* width: 100%; */
-}
 
+/*============== Utility Classes ================ */
 .bold{
   font-weight: bold;
 }
@@ -27,6 +23,8 @@
   padding: 0;
 }
 
+
+/*============== CSS Variables ================== */
 :root{
   --light-background: grey;
   --text-color: #07E77B;
@@ -35,11 +33,8 @@
   --background-light-color: rgba(0,0,0, 0.03);
 }
 
-@font-face {
-  font-family: zcool;
-  src: url(./assets/font_zcool-kuaile.ttf);
-}
 
+/*================ Animations ===================*/
 @keyframes pulse{
   50%{
     transform: scale(1.2)
@@ -52,7 +47,7 @@
   }
 }
 
-@keyframes rotate-logo{
+@keyframes dancing-logo{
   25%{
     transform: translateY(10px);
     /* transform: translateX(30px); */
@@ -66,28 +61,27 @@
   }
 }
 
+/*============= Grid Preview For Development ================ */
+*{
+  /* border: 1px dotted white; */
+}
+
+
+/*================ Begining Of Body Section ====================*/
 body{
   background-color: var(--background-dark-color);
 }
 
-header *{
-  /* border: 1px dotted white; */
-}
 
+/*============== Begining Of Header Section ================== */
 header{
-  /* position: fixed; */
   display: grid;
   grid-template-rows: 1fr 1fr 0.6fr 1fr;
   align-items: center;
-  /* justify-items: center: */
-  /* top: 0; */
   width: 100%;
   height: 100vh;
-  /* padding: 1.5em 3em; */
   background-color: var(--background-light-color);
   z-index: 1;
-  /* border-bottom: 1px solid gray; */
-  /* text-align: center; */
 }
 
 div.row1{
@@ -98,7 +92,7 @@ div.row1{
 }
 
 div.row1 > div > .logo{
-  animation: rotate-logo 2s ease-in-out infinite;
+  animation: dancing-logo 2s ease-in-out infinite;
 }
 
  div.row1 > div > a > .info{
@@ -154,12 +148,11 @@ div.row4{
 }
 /*----------------- End Of Header Section -------------------*/
 
+
 /*================ Begining Of Body Section ==================*/
 main{
   width: 100%;
   margin-top: 5.3em;
-  /* background-color: orange; */
-  /* color: orange */
 }
 
 section{
@@ -167,20 +160,11 @@ section{
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5em;
-  /* background-color: whitesmoke; */
 }
-
-section *{
-  /* border: 1px dashed gray; */
-}
-
-
 
 section > .block{
   height: 400px;
   padding: 1.9em 1.8em;
-  /* display: grid;
-  grid-template-columns: 1fr 3fr 8fr; */
   justify-items: center;
   width: 100%;
   max-width: 1400px;
@@ -189,9 +173,7 @@ section > .block{
 }
 
 .block > .content{
-  /* margin: 0 auto; */
   width: 80%;
-  /* background-color: blue; */
 }
 
 .block-title{
@@ -200,7 +182,6 @@ section > .block{
   margin-bottom: 0.2em;
   height: fit-content;
   background-color: var(--background-color);
-  /* font-family: zcool; */
   font-size: 2em;
   text-align: center;
   color: white;
@@ -217,12 +198,8 @@ div.block-body{
 }
 
 input{
-  /* margin: 0 auto; */
   width: 100%;
-  /* width: 70px; */
   height: 100%;
-  /* white-space: wrap; */
-  /* text-align: center; */
   display: block;
   padding: 0px 5px;
   font-size: 0.9rem;
@@ -230,7 +207,6 @@ input{
   border: 1px solid #07E77B;
   border-radius: 3px;
   color: var(--text-color)
-  /* border: none; */
 }
 
 textarea{
@@ -255,19 +231,16 @@ textarea::placeholder{
 
 input:focus{
   border: 1px solid var(--text-color) !important;
-  /* background-color: red; */
 }
 
 .output{
   width: 100%;
   height: 100%;
-  /* text-align: center; */
   padding: 10px;
   font-size: 1.1em;
   text-overflow: clip;
   overflow-y: scroll;
   overflow-wrap:break-word;
-  /* max-height: 11rem; */
   background-color: var(--text-color);
   border: 1px solid var(--background-color);
   border-radius: 3px;
@@ -305,7 +278,6 @@ input:focus{
 }
 
 #base_inputs{
-  /* background-color: blue; */
   width: 100%;
   display: grid;
   grid-template-rows: 4fr 1fr 1fr;
@@ -343,26 +315,17 @@ select{
   font-size: 0.9rem;
   padding: 0 0.5em;
   font-family: 'ZCOOL KuaiLe', Tahoma;
-  
-  /* display: grid;
-  grid-template-rows: 1fr; */
-  /* text-align: center; */
-
-  /* border: none; */
 }
+/*---------------- End Of Body Section ----------------- */
 
-h2{
-  border: none;
-}
 
+/*============= Begining Of Footer Section ==============*/
 footer{
   text-align: center;
   padding: 0.5em 3vw;
   font-size: 1.2em;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   color: rgba(255, 90, 90, 1);
   font-family: monospace;
-  /* font-weight: bold; */
 }
 
 footer > p > a{
@@ -376,12 +339,11 @@ hr{
   background-color: var(--placeholder-text-color);
   margin-top: 4em;
 }
+/*--------------- End Of Footer Section -------------------*/
 
 
+/*============= Media Query For Mobile Devices ============= */
 @media only screen and (max-width: 700px){
-  *{
-    box-sizing: border-box;
-  }
   body *{
     text-align: center;
   }
@@ -397,7 +359,6 @@ hr{
   }
 
   div#base_inputs{
-    /* grid-template-columns: 1fr; */
     grid-template-columns: 3fr 1fr 1fr;
     border: none;
   }
@@ -407,8 +368,6 @@ hr{
   }
 
   div#base_inputs > input, div#base_inputs > select{
-    /* grid-template-columns: 1fr;
-    grid-template-columns: 3fr 1fr 1fr; */
     border: 1px solid var(--text-color);
   }
 
@@ -447,78 +406,4 @@ hr{
     padding: 1.5em;
   }
 }
-/* @media only screen and (max-width: 1200px){
-  section{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-  }
-
-}
-
-@media only screen and (max-width: 1000px){
-  section{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-  }
-}
-
-@media only screen and (max-width: 800px){
-  section{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-  }
-}
-
-@media only screen and (max-width: 650px){
-  section{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  header{
-    position: fixed;
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    top: 0;
-    width: 100%;
-    padding: 1.5em 1.5em;
-    background-color: white;
-    z-index: 1;
-  }
-
-  header > div > h3{
-    font-size: 1.2em;
-    text-align: right;
-  }
-}
-
-@media only screen and (max-width: 600px){
-  section{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0em;
-  }
-
-  section, section > div{
-    border-right: none;
-    border-left: none;
-    border-top: none;
-  }
-
-  header{
-    padding: 1em 1.5em;
-  }
-
-  main{
-    margin-top: 6em;
-  }
-} */
+/*--------------- End Of Media Query Section -------------- */
