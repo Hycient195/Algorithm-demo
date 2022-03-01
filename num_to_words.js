@@ -263,7 +263,7 @@ function numToWords(num){
 
   while(numVar >= 1){
     result += 'one'
-    numVar -= 1;
+    numVar -= 1;z
   }
 
   /** Zero input case */

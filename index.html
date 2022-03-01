@@ -5,180 +5,219 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
   <title>Algorithm Utilities</title>
 </head>
 <body>
   <header>
-    <h1>Algorithm Utilities</h1>
-    <div>
-      <h3><a target="_blank" href="https://dsa-doc-hycient.vercel.app/">Documentation</a></h3>
-      <h3><a target="_blank" href="http://hycient-portfolio.herokuapp.com/">Profile</a></h3>
+    <div class="row row1">
+      <div></div>
+      <div><img class="logo" src="./assets/logo_ish.svg" alt="logo"></div>
+      <div><a  target="_blank" href="https://dsa-doc-hycient.vercel.app/"><img class="info" src="./assets/info_ish.svg" alt=""></a></div>
+    </div>
+    <div class="row row2">
+      <h1>Welcome</h1>
+      <p>To Algorithm Utilities</p>
+      <a href="#rot13-encryptor"><button class="proceed">Proceed</button></a>
+    </div>
+    <div class="row row3">
+      <a href="#rot13-encryptor"><img src="./assets/dropdown_ish.png" alt=""></a>
+    </div>
+    <div class="row row4">
+
     </div>
   </header>
   <main>
     <section>
-      <div class="block" >
+      <div class="block" id="rot13-encryptor">
         <p class="block-title">ROT13 Encryptor</p>
         <!-- <h3 class="title">hello</h3> -->
-        <!-- <div class="content"> -->
-          <input type="text" id="caeser-cipher-input" value="" placeholder="Enter text to be encrypted">
+        <div class="block-body">
+          <textarea type="text" id="caeser-cipher-input" value="" placeholder="Enter text to be encrypted"></textarea>
           <div class="output" id="caeser-cipher-output">
-
+            Output
           </div>
-        <!-- </div> -->
+        </div>
         <script src="./caesar_cipher.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">ROT13 Decryptor</p>
-          <input type="text" id="reverse-caeser-cipher-input" placeholder="Enter text to be decrypted">
-          <div class="output" id="reverse-caeser-cipher-output">
-            
+          <div class="block-body">
+            <textarea type="text" id="reverse-caeser-cipher-input" placeholder="Enter text to be decrypted"></textarea>
+            <div class="output" id="reverse-caeser-cipher-output">
+              Output
+            </div>
           </div>
         <script src="./reverse_caeser_cipher.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">Number To Words Converter</p>
-          <input type="number" id="num_to_words_input" placeholder="Enter number to be converted">
+         <div class="block-body">
+          <textarea type="number" id="num_to_words_input" placeholder="Enter number to be converted"></textarea>
           <div class="output" id="num_to_words_output">
             
           </div>
+         </div>
         <script src="./num_to_words.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">Number Base Converter</p>
-        <div id="base_inputs">
-          <input type="text" id="num_base_input" placeholder="Enter number">
-          <select name="" id="base_from" value="">
-            <option name="" id="">from</option>
-            <option value="2">Base 2</option>
-            <option value="3">Base 3</option>
-            <option value="4">Base 4</option>
-            <option value="5">Base 5</option>
-            <option value="6">Base 6</option>
-            <option value="7">Base 7</option>
-            <option value="8">Base 8</option>
-            <option value="9">Base 9</option>
-            <option value="10">Base 10</option>
-            <option value="11">Base 11</option>
-            <option value="12">Base 12</option>
-            <option value="13">Base 13</option>
-            <option value="14">Base 14</option>
-            <option value="15">Base 15</option>
-            <option value="16">Base 16</option>
-          </select>
-          <select name="" id="base_to" value=""> 
-            <option name="" id="">to</option>
-            <option value="2">Base 2</option>
-            <option value="3">Base 3</option>
-            <option value="4">Base 4</option>
-            <option value="5">Base 5</option>
-            <option value="6">Base 6</option>
-            <option value="7">Base 7</option>
-            <option value="8">Base 8</option>
-            <option value="9">Base 9</option>
-            <option value="10">Base 10</option>
-            <option value="11">Base 11</option>
-            <option value="12">Base 12</option>
-            <option value="13">Base 13</option>
-            <option value="14">Base 14</option>
-            <option value="15">Base 15</option>
-            <option value="16">Base 16</option>
-          </select>
-        </div>
-
-          <div class="output" id="base_output">
-            
+        <div class="block-body">
+          <div id="base_inputs">
+            <input type="text" id="num_base_input" placeholder="Enter number">
+            <select name="" id="base_from" value="">
+              <option name="" id="">>From</option>
+              <option value="2">Base 2</option>
+              <option value="3">Base 3</option>
+              <option value="4">Base 4</option>
+              <option value="5">Base 5</option>
+              <option value="6">Base 6</option>
+              <option value="7">Base 7</option>
+              <option value="8">Base 8</option>
+              <option value="9">Base 9</option>
+              <option value="10">Base 10</option>
+              <option value="11">Base 11</option>
+              <option value="12">Base 12</option>
+              <option value="13">Base 13</option>
+              <option value="14">Base 14</option>
+              <option value="15">Base 15</option>
+              <option value="16">Base 16</option>
+            </select>
+            <select name="" id="base_to" value=""> 
+              <option name="" id="">>To</option>
+              <option value="2">Base 2</option>
+              <option value="3">Base 3</option>
+              <option value="4">Base 4</option>
+              <option value="5">Base 5</option>
+              <option value="6">Base 6</option>
+              <option value="7">Base 7</option>
+              <option value="8">Base 8</option>
+              <option value="9">Base 9</option>
+              <option value="10">Base 10</option>
+              <option value="11">Base 11</option>
+              <option value="12">Base 12</option>
+              <option value="13">Base 13</option>
+              <option value="14">Base 14</option>
+              <option value="15">Base 15</option>
+              <option value="16">Base 16</option>
+            </select>
           </div>
+  
+            <div class="output" id="base_output">
+              
+            </div>
+        </div>
         <script src="./base_converter.js"></script>
       </div>
 
       
       <div class="block">
         <p class="block-title">Missing Letter Finder</p>
-          <input type="text" id="missing_letter_input" placeholder="Enter the sequence of letters">
-          <div class="output" id="missingg_letter_output">
-            
+          <div class="block-body">
+            <textarea type="text" id="missing_letter_input" placeholder="Enter the sequence of letters"></textarea>
+            <div class="output" id="missingg_letter_output">
+              
+            </div>
           </div>
         <script src="./missing_letter.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">Arabic To Roman Numeral Converter</p>
-          <input type="number" id="numeral_conv_input" placeholder="Enter number to be converted">
-          <div class="output" id="numeral_conv_output">
-            
+          <div class="block-body">
+            <textarea type="number" id="numeral_conv_input" placeholder="Enter number to be converted"></textarea>
+            <div class="output" id="numeral_conv_output">
+              
+            </div>
           </div>
         <script src="./roman_numeral_converter.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">Word To Binary Converter</p>
-          <input type="text" id="word_input" placeholder="Enter word to be converted">
-          <div class="output" id="binary_output">
-            
+          <div class="block-body">
+            <textarea type="text" id="word_input" placeholder="Enter word to be converted"></textarea>
+            <div class="output" id="binary_output">
+              
+            </div>
           </div>
         <script src="./string_to_binary.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">Binary To Word Converter</p>
-          <input type="text" id="binary_input" placeholder="Enter binary sequence to be converted">
-          <div class="output" id="word_output">
-            
+          <div class="block-body">
+            <textarea type="text" id="binary_input" placeholder="Enter binary sequence to be converted"></textarea>
+            <div class="output" id="word_output">
+              
+            </div>
           </div>
         <script src="./binary_to_string.js"></script>
       </div>
 
+      <!-- Revisit -->
       <div class="block">
         <p class="block-title">Sum In Range</p>
-        <div id="range_inputs">
-          <input type="number" id="min_range_input" placeholder="Enter lower range">
-          <input type="number" id="max_range_input" placeholder="Enter upper range">
-        </div>    
-        <div class="output" id="sum_output">
-            
+        <div class="block-body">
+          <div class="range_inputs">
+            <input type="number" id="min_range_input" placeholder="Enter lower range">
+            <input type="number" id="max_range_input" placeholder="Enter upper range">
+          </div>    
+          <div class="output" id="sum_output">
+              
           </div>
+        </div>
         <script src="./sum_in_range.js"></script>
       </div>
 
+
       <div class="block">
         <p class="block-title">Palindrome Checker</p>
-          <input type="text" id="palindrome_input" placeholder="Enter word to be checked">
+         <div class="block-body">
+          <textarea type="text" id="palindrome_input" placeholder="Enter word to be checked"></textarea>
           <div class="output" id="palindrome_output">
             
           </div>
+         </div>
         <script src="./palindrome_checker.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">English To Pig Latin Converter</p>
-          <input type="text" id="pig_latin_input" placeholder="Enter text to be converted">
-          <div class="output" id="pig_latin_output">
-            
+          <div class="block-body">
+            <textarea type="text" id="pig_latin_input" placeholder="Enter text to be converted"></textarea>
+            <div class="output" id="pig_latin_output">
+              
+            </div>
           </div>
         <script src="./pig_latin.js"></script>
       </div>
 
       <div class="block">
         <p class="block-title">Sorted Union</p>
-        <div id="range_inputs">
-          <input type="text" id="union_entry_one" placeholder="Enter text to be converted">
-          <input type="text" id="union_entry_two" placeholder="Enter text to be converted">
-        </div>         
-        <div class="output" id="union_output">
-          
+        <div class="block-body">
+          <div class="range_inputs">
+            <input type="text" id="union_entry_one" placeholder="Input 1">
+            <input type="text" id="union_entry_two" placeholder="Input 2">
+          </div>         
+          <div class="output" id="union_output">
+            
+          </div>
         </div>
         <script src="./sorted_union.js"></script>
       </div>
 
     </section>
   </main>
+  <hr> 
   <footer>
-    <p><a href="hycient-portfolio.herokuapp.com">Hycient Onyeukwu</a> | 2022</p>
-    <p>User interface and all functionalities built using plain HTML CSS and Vanilla JavaScript, with no frameworks</p>
+    <p><a target="_blank" href="http://hycient-portfolio.herokuapp.com/">Hycient Onyeukwu</a> | 2022</p>
+    <p>User interface and algorithm implementation built using plain HTML, CSS and Vanilla JavaScript, with no frameworks. | Design concept by <a target="_blank" href="https://www.linkedin.com/in/favourmokwenye">Favour</a></p>
   </footer>
 </body>
 </html>

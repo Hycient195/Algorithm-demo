@@ -1,48 +1,157 @@
 /* Global Rules */
 *{
   box-sizing: border-box;
+  scroll-behavior: smooth;
   /* border: 1px solid black; */
   /* border: none; */
   /* border-radius: 10px; */
+}
+
+.body{
+  /* width: 100%; */
 }
 
 .bold{
   font-weight: bold;
 }
 
+.not-bold{
+  font-weight: normal;
+}
+
+.no-pad-mar{
+  margin: 0;
+  padding: 0;
+}
+
 :root{
   --light-background: grey;
+  --text-color: #07E77B;
+  --placeholder-text-color: #197c4c;
+  --background-dark-color: rgba(0,0,0, 0.88);
+  --background-light-color: rgba(0,0,0, 0.03);
+}
+
+@font-face {
+  font-family: zcool;
+  src: url(./assets/font_zcool-kuaile.ttf);
+}
+
+@keyframes pulse{
+  50%{
+    transform: scale(1.2)
+  }
+}
+
+@keyframes point-down{
+  50%{
+    transform: translateY(10px);
+  }
+}
+
+@keyframes rotate-logo{
+  25%{
+    transform: translateY(10px);
+    /* transform: translateX(30px); */
+  }
+  65%{
+    transform: translateY(-20px);
+    transform: translateX(10px);
+  }
+  90%{
+    transform: translateX(-5px)
+  }
+}
+
+body{
+  background-color: var(--background-dark-color);
+}
+
+header *{
+  /* border: 1px dotted white; */
 }
 
 header{
-  position: fixed;
+  /* position: fixed; */
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr 1fr 0.6fr 1fr;
+  align-items: center;
   /* justify-items: center: */
-  top: 0;
+  /* top: 0; */
   width: 100%;
-  padding: 1.5em 3em;
-  background-color: white;
+  height: 100vh;
+  /* padding: 1.5em 3em; */
+  background-color: var(--background-light-color);
   z-index: 1;
   /* border-bottom: 1px solid gray; */
   /* text-align: center; */
 }
 
-header > div > h3{
-  margin: 0px;
+div.row1{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
 }
 
-header > div > h3 > a{
+div.row1 > div > .logo{
+  animation: rotate-logo 2s ease-in-out infinite;
+}
+
+ div.row1 > div > a > .info{
+  margin-top: 1.5em;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+div.row2{
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'ZCOOL KuaiLe', Tahoma ;
+}
+
+div.row2 > h1{
+  color: white;
+  font-size: 5em;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+div.row2 > p{
+  color: white;
+  font-size: 1.3em;
+}
+
+div.row2 > a > button{
   color: black;
-  font-family: monospace;
+  width: 100%;
+  padding: 0.5em 2em;
+  font-size: 1em;
+  border: none;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+  background-color: var(--text-color);
+  animation: pulse 2s ease-in-out infinite;
 }
 
-header > h1{
-  margin: 0px;
-  font-size: 3.5vh;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+div.row3{
+  text-align: center;
 }
 
+div.row3 > a > img{
+  animation: point-down 1s ease-in-out infinite;
+}
+
+div.row4{
+  background: url(./assets/binary_ish.svg);
+  height: 100%;
+  /* width: 120%; */
+  background-size: 100%;
+}
+/*----------------- End Of Header Section -------------------*/
+
+/*================ Begining Of Body Section ==================*/
 main{
   width: 100%;
   margin-top: 5.3em;
@@ -50,26 +159,30 @@ main{
   /* color: orange */
 }
 
-
 section{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5em;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 }
 
 section *{
-  border: 1px solid gray;
+  /* border: 1px dashed gray; */
 }
 
+
+
 section > .block{
-  height: 350px;
+  height: 400px;
   padding: 1.9em 1.8em;
-  display: grid;
-  grid-template-rows: 1fr 3fr 8fr;
+  /* display: grid;
+  grid-template-columns: 1fr 3fr 8fr; */
   justify-items: center;
-  /* row-gap: 2em; */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 2.2em;
 }
 
 .block > .content{
@@ -83,56 +196,155 @@ section > .block{
   margin: -10px;
   margin-bottom: 0.2em;
   height: fit-content;
-  background-color: white;
-  font-family: monospace;
-  font-size: 1.2em;
+  background-color: var(--background-color);
+  /* font-family: zcool; */
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+}
+
+div.block-body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  padding: 1.5em 2em;
+  gap: 2em;
 }
 
 input{
   /* margin: 0 auto; */
   width: 100%;
-  height: 3em;
-  text-align: center;
+  /* width: 70px; */
+  height: 100%;
+  /* white-space: wrap; */
+  /* text-align: center; */
+  display: block;
   padding: 0px 5px;
   font-size: 0.9rem;
+  background-color: rgba(0,0,0, 0.1);
+  border: 1px solid #07E77B;
+  border-radius: 3px;
+  color: var(--text-color)
+  /* border: none; */
+}
+
+textarea{
+  background-color: var(--background-light-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 3px;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+  word-spacing: 9px;
+}
+
+textarea:focus{
+  border: 1px solid var(--text-color);
+  padding: 10px;
+}
+
+textarea::placeholder{
+  color: var(--placeholder-text-color);
+}
+
+input:focus{
+  border: 1px solid var(--text-color) !important;
+  /* background-color: red; */
 }
 
 .output{
   width: 100%;
-  text-align: center;
+  height: 100%;
+  /* text-align: center; */
   padding: 10px;
   font-size: 1.1em;
   text-overflow: clip;
   overflow-y: scroll;
   overflow-wrap:break-word;
-  max-height: 11rem;
-  background-color: white;
+  /* max-height: 11rem; */
+  background-color: var(--text-color);
+  border: 1px solid var(--background-color);
+  border-radius: 3px;
+  color: var(black);
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+  word-spacing: 10px;
+}
+
+#base_inputs > input{
+  border: none;
+  background-color: rgba(0,0,0, 0.1);
+  color: #07E77B;
+  font-size: 2em;
+  color: var(--text-color);
+}
+
+#base_inputs > input::placeholder{
+  color: var(--placeholder-text-color);
+}
+
+#base_output{
+  font-size: 2em;
+  text-align: center;
+}
+
+#base_from, #base_to{
+  border: none;
+  border-top: 1px solid var(--text-color) !important;
+  background-color: rgba(0,0,0, 0.1);
+  color: #07E77B;
+}
+
+#base_from:focus, #base_to:focus{
+  border: 1px solid var(--text-color);
 }
 
 #base_inputs{
   /* background-color: blue; */
   width: 100%;
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr;
-  height: max-content;
+  grid-template-rows: 4fr 1fr 1fr;
+  align-items: center;
   text-align: center;
+  border: 2px solid #07E77B;
 }
 
-#range_inputs{
+.range_inputs{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: max-content;
+  grid-template-rows: 1fr 1fr;
   text-align: center;
+  font-size: 2em;
 }
 
-#range_inputs{
-  border: none;
+.range_inputs > input::placeholder{
+  color: var(--placeholder-text-color);
+  font-size: 0.7em;
+}
+
+.range_inputs > input{
+  text-align: center;
+  font-size: 1em;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+}
+
+#num_base_input{
+  text-align: center;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
 }
 
 select{
   height: 3em;
   font-size: 0.9rem;
+  padding: 0 0.5em;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+  
+  /* display: grid;
+  grid-template-rows: 1fr; */
+  /* text-align: center; */
+
   /* border: none; */
 }
 
@@ -142,17 +354,97 @@ h2{
 
 footer{
   text-align: center;
-  padding: 0px 3vw;
-  font-size: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0.5em 3vw;
+  font-size: 1.2em;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  color: rgba(255, 90, 90, 1);
+  font-family: monospace;
   /* font-weight: bold; */
 }
 
 footer > p > a{
-  color: black;
+  color: rgba(255, 90, 90, 1);
 }
 
-@media only screen and (max-width: 1200px){
+hr{
+  border: none;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--placeholder-text-color);
+  margin-top: 4em;
+}
+
+
+@media only screen and (max-width: 700px){
+  *{
+    box-sizing: border-box;
+  }
+  body *{
+    text-align: center;
+  }
+
+  div.block-body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr !important;
+    height: 100%;
+    width: 100%;
+    padding: 1.5em 2em;
+    gap: 2em;
+  }
+
+  div#base_inputs{
+    /* grid-template-columns: 1fr; */
+    grid-template-columns: 3fr 1fr 1fr;
+    border: none;
+  }
+
+  div#base_inputs > input::placeholder{
+    font-size: 0.8em !important;
+  }
+
+  div#base_inputs > input, div#base_inputs > select{
+    /* grid-template-columns: 1fr;
+    grid-template-columns: 3fr 1fr 1fr; */
+    border: 1px solid var(--text-color);
+  }
+
+  .range_inputs{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  div.row2 > h1{
+    color: white;
+    font-size: 4em;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+  }
+
+  div.row2 > p{
+    font-size: 1em;
+  }
+  
+  div.row2 > a > button{
+    width: 70%;
+  }
+
+  .block-title{
+    font-size: 1.8em;
+  }
+
+  select{
+    padding: 0;
+  }
+
+  footer{
+    padding: 1.5em;
+  }
+}
+/* @media only screen and (max-width: 1200px){
   section{
     width: 100%;
     display: grid;
@@ -192,13 +484,11 @@ footer > p > a{
     position: fixed;
     display: grid;
     grid-template-columns: 5fr 1fr;
-    /* justify-items: center: */
     top: 0;
     width: 100%;
     padding: 1.5em 1.5em;
     background-color: white;
     z-index: 1;
-    /* text-align: center; */
   }
 
   header > div > h3{
@@ -228,4 +518,4 @@ footer > p > a{
   main{
     margin-top: 6em;
   }
-}
+} */
