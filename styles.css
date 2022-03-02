@@ -206,7 +206,15 @@ input{
   background-color: rgba(0,0,0, 0.1);
   border: 1px solid #07E77B;
   border-radius: 3px;
-  color: var(--text-color)
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.6em;
+  font-family: 'ZCOOL KuaiLe', Tahoma;
+}
+
+input::placeholder{
+  color: var(--placeholder-text-color);
+  
 }
 
 textarea{
@@ -294,6 +302,15 @@ input:focus{
   font-size: 2em;
 }
 
+#sum_output{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#palindrome_output{
+  text-align: center;
+}
+
 .range_inputs > input::placeholder{
   color: var(--placeholder-text-color);
   font-size: 0.7em;
@@ -315,6 +332,11 @@ select{
   font-size: 0.9rem;
   padding: 0 0.5em;
   font-family: 'ZCOOL KuaiLe', Tahoma;
+  background-color: var(--background-light-color) !important;
+}
+
+select > option{
+  background: var(--background-light-color) !important;
 }
 /*---------------- End Of Body Section ----------------- */
 

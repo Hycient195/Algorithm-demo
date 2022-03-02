@@ -10,6 +10,7 @@ num2words_input.addEventListener('input', (e)=>{
 
 
 function numToWords(num){
+  if(num > 10000) return "Input above range";
   let result = ''; // variable to store the text of the number in words
   let numVar = num; // making a copy of the number variable provided
 
